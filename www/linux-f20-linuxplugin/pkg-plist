@@ -1,0 +1,11 @@
+/you/have/to/check/what/makeplist/gives/you
+lib/browser_plugins/symlinks/linux-firefox/libflashplayer.so
+lib/browser_plugins/symlinks/linux-opera-devel/libflashplayer.so
+lib/browser_plugins/symlinks/linux-opera/libflashplayer.so
+lib/browser_plugins/symlinks/linux-seamonkey/libflashplayer.so
+@dirrmtry lib/browser_plugins/symlinks/linux-firefox
+@dirrmtry lib/browser_plugins/symlinks/linux-opera
+@dirrmtry lib/browser_plugins/symlinks/linux-opera-devel
+@dirrmtry lib/browser_plugins/symlinks/linux-seamonkey
+@dirrmtry lib/browser_plugins/symlinks
+@dirrmtry lib/browser_plugins
