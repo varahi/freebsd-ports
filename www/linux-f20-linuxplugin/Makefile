@@ -6,9 +6,11 @@ PORTVERSION=	11.2.202.400
 PACKAGE_PATH=	11_2r202_400
 CATEGORIES=	www multimedia linux
 MASTER_SITES=	http://download.macromedia.com/pub/flashplayer/installers/archive/
+#MASTER_SITES= http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.400/
 
 PKGNAMEPREFIX=	linux-f20-
 DISTFILES=	fp_${PORTVERSION}_archive.zip
+#DISTFILES=install_flash_player_11_linux.i386.tar.gz
 
 
 MAINTAINER=	vassilis@einval.com
@@ -36,16 +38,15 @@ WEBPLUGIN_FILES=	libflashplayer.so
 OPTIONS_SUB=	yes
 PLIST_SUB+=RESETPREFIX=${PREFIX}
 
-.include <bsd.port.options.mk>
+#.include <bsd.port.options.mk>
 
 #.if ${PORT_OPTIONS:MGNOME}
 #USES+=		desktop-file-utils
 #INSTALLS_ICONS=	yes
 #.endif
 
-pre-patch:
-	@cd ${WRKDIR}/
-	@tar -xzf $p_${PORTVERSION}_archive/${PACKAGE_PATH}_32bit/flashplayer_${PACKAGE_PATH}_linux.${LINUX_CPU_ARCH}.tar.gz
+#pre-patch:
+	#@tar -xzf fp_${PORTVERSION}_archive/${PACKAGE_PATH}_32bit/flashplayer_${PACKAGE_PATH}_linux.${LINUX_CPU_ARCH}.tar.gz
 
 #post-patch:
 	#@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|' -e '/^NotShowIn=KDE/d' ${WRKDIR}/usr/share/applications/flash-player-properties.desktop
