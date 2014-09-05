@@ -1,6 +1,5 @@
-# Created by: vassilis@einval.com
 # Created by: netchild@FreeBSD.org
-# $FreeBSD: $
+# $FreeBSD$
 
 PORTNAME=	skype
 
@@ -39,7 +38,6 @@ PLIST_SUB+=	SKYPEDIR=${SKYPEDIR}
 SUB_FILES=	skype.sh
 SUB_LIST+=	SKYPEDIR=${SKYPEDIR}
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
